@@ -1,0 +1,5 @@
+grpc==1.0.0
+grpcio==1.39.0
+paho_mqtt==1.6.1
+protobuf==3.20.0
+pymodbus==2.5.2

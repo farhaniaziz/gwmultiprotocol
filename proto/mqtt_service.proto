@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+service mqtt{
+    rpc publish(mqtt_msg) returns (Empty);
+}
+
+message mqtt_msg {
+    string data = 1;
+    string topic = 2;
+}
+
+message Empty {
+
+}

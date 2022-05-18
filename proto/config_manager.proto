@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+message Configuration {
+    string bloc = 1;
+    string config =2;
+}
+
+message ConfigurationValue {
+    string value = 1;
+}
+
+message ConfigurationSet {
+    string bloc =1;
+    string config = 2;
+    string value = 3;
+}
+message EMPTY {
+
+}
+service ConfigurationService {
+    rpc GetConfig(Configuration) returns (ConfigurationValue) {};
+    rpc SetConfig(ConfigurationSet) returns (EMPTY) {};
+}
