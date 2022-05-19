@@ -1,10 +1,10 @@
 {
     "mqtt": {
-        "broker": "localhost",
+        "broker": "10.42.1.1",
         "port": 1883
     },
     "modbustcp": {
-        "server": "localhost",
+        "server": "10.42.1.1",
         "port": 5020
     }
 }

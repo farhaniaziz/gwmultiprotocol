@@ -42,7 +42,7 @@ def run():
     with grpc.insecure_channel('0.0.0.0:50051') as mqtt_channel:
         mqtt_stub = mqtt_service_pb2_grpc.mqttStub(mqtt_channel)
         while 1:
-            modbus_data = MODBUS_CLIENT.read_holding_registers(0, 1, unit=UNIT)*
+            modbus_data = MODBUS_CLIENT.read_holding_registers(0, 1, unit=UNIT)
             for mdata in modbus_data.registers:
                 mqtt_stub.publish(mqtt_service_pb2.mqtt_msg(data=str(mdata), topic="modbustcp"))
             time.sleep(2)
