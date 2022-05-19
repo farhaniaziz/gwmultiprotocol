@@ -1,0 +1,11 @@
+[Unit]
+Description=GW_MP MODBUS TCP Client Service
+
+[Service]
+User=root
+WorkingDirectory=/opt/gwmp
+ExecStart=/usr/bin/python3 /opt/gwmp/gw_mp_modbus_client.py
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
