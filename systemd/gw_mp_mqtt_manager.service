@@ -1,6 +1,7 @@
 [Unit]
 Description=GW_MP MQTT Manager Service
-#After=gw_mp_config_manager.service
+After=gw_mp_config_manager.service
+Requires=gw_mp_config_manager.service
 
 [Service]
 User=root

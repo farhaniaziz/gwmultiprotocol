@@ -1,5 +1,9 @@
 [Unit]
 Description=GW_MP MODBUS TCP Client Service
+After=gw_mp_mqtt_manager.service
+After=gw_mp_config_manager.service
+Requires=gw_mp_config_manager.service
+Requires=gw_mp_mqtt_manager.service
 
 [Service]
 User=root
