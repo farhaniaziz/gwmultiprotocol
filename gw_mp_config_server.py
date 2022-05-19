@@ -9,6 +9,7 @@ __email__ = "farhaniaziz285@gmail.com, aimen.majoul@gmail.com"
 from concurrent import futures
 import json
 import grpc
+import time
 
 import config_manager_pb2_grpc as pb2_grpc
 import config_manager_pb2 as pb2
@@ -63,7 +64,9 @@ def main_config_manager():
     print('Started')
     server.add_insecure_port('[::]:50050')
     server.start()
-    server.wait_for_termination()
+    while 1:
+        time.sleep(10)
+    #mqtt_server.wait_for_termination()
 
 if __name__ == '__main__':
     try:

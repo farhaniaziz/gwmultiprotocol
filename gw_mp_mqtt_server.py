@@ -15,6 +15,7 @@ import paho.mqtt.client as mqtt
 import grpc
 import mqtt_service_pb2
 import mqtt_service_pb2_grpc
+import time
 
 # Config Manager gRPC library
 import config_manager_pb2 as cm_pb2
@@ -56,7 +57,9 @@ def main_mqtt_server():
     log_info("[MQTTServer] Server started!")
     mqtt_server.add_insecure_port('[::]:50051')
     mqtt_server.start()
-    mqtt_server.wait_for_termination()
+    while 1:
+        time.sleep(10)
+    #mqtt_server.wait_for_termination()
 
 if __name__ == '__main__':
     try:
