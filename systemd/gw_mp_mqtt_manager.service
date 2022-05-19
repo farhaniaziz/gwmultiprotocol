@@ -3,12 +3,10 @@ Description=GW_MP MQTT Manager Service
 #After=gw_mp_config_manager.service
 
 [Service]
-User=farhani
+User=root
 WorkingDirectory=/opt/gwmp
 ExecStart=/usr/bin/python3 /opt/gwmp/gw_mp_mqtt_server.py
 Restart=on-failure
-StartLimitBurst=2
-StartLimitInterval=30
 
 [Install]
 WantedBy=multi-user.target

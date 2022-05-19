@@ -2,7 +2,7 @@
 Description=GW_MP Configuration Manager Service
 
 [Service]
-User=farhani
+User=root
 WorkingDirectory=/opt/gwmp
 ExecStart=/usr/bin/python3 /opt/gwmp/gw_mp_config_server.py
 Restart=on-failure
